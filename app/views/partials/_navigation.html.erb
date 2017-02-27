@@ -1,0 +1,31 @@
+<header>
+  	<nav class= "be-red white">
+    <h1 class="no-margin id="logo" ">Mi Blog</h1>
+  		<ul>
+  			<li class="cold-md">
+  				<%= link_to "Inicio",root_path %>
+  			</li>
+  			<li class="cold-md">
+  				Diseño
+  			</li>
+  			<li class="cold-md">
+  				Prgramacion
+  			</li>
+  			<li class="cold-md">
+  				Tecnologia
+  			</li>
+        <% if user_signed_in? %>
+        <li>
+          <%=link_to "Cerrar sesion", destroy_user_session_path, method: :delete%>
+        </li>
+        <%else%>
+        <li>
+          <%=link_to "Iniciar sección", new_user_session_path%>
+        </li>
+        <li>
+          <%=link_to "Crear cuenta", new_user_registration_path  %>
+        </li>
+        <%end%>
+  		</ul>
+  	</nav>
+  </header>
