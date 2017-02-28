@@ -1,31 +1,54 @@
-<header>
-  	<nav class= "be-red white">
-    <h1 class="no-margin id="logo" ">Mi Blog</h1>
-  		<ul>
-  			<li class="cold-md">
-  				<%= link_to "Inicio",root_path %>
-  			</li>
-  			<li class="cold-md">
-  				Diseño
-  			</li>
-  			<li class="cold-md">
-  				Prgramacion
-  			</li>
-  			<li class="cold-md">
-  				Tecnologia
-  			</li>
-        <% if user_signed_in? %>
-        <li>
-          <%=link_to "Cerrar sesion", destroy_user_session_path, method: :delete%>
-        </li>
-        <%else%>
-        <li>
-          <%=link_to "Iniciar sección", new_user_session_path%>
-        </li>
-        <li>
-          <%=link_to "Crear cuenta", new_user_registration_path  %>
-        </li>
-        <%end%>
-  		</ul>
-  	</nav>
-  </header>
+<div class="bs-component">
+          <div class="navbar navbar-warning">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-warning-collapse">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="javascript:void(0)">Brand</a>
+              </div>
+              <div class="navbar-collapse collapse navbar-warning-collapse">
+                <ul class="nav navbar-nav">
+                  <li class="active"><%= link_to "Inicio",root_path %></li>
+                  <li><a href="javascript:void(0)">Link</a></li>
+                  <li class="dropdown">
+                    <a href="http://fezvrasta.github.io/bootstrap-material-design/bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown
+                      <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="javascript:void(0)">Action</a></li>
+                      <li><a href="javascript:void(0)">Another action</a></li>
+                      <li><a href="javascript:void(0)">Something else here</a></li>
+                      <li class="divider"></li>
+                      <li class="dropdown-header">Dropdown header</li>
+                      <li><a href="javascript:void(0)">Separated link</a></li>
+                      <li><a href="javascript:void(0)">One more separated link</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <form class="navbar-form navbar-left">
+                  <div class="form-group is-empty">
+                    <input class="form-control col-md-8" placeholder="Search" type="text">
+                  </div>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                  <li><%=link_to "Cerrar sesion", destroy_user_session_path, method: :delete%></li>
+                  <li><%=link_to "Iniciar sección", new_user_session_path%></li>
+                  <li><%=link_to "Crear cuenta", new_user_registration_path  %></li>
+                  <li class="dropdown">
+                    <a href="http://fezvrasta.github.io/bootstrap-material-design/bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown
+                      <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="javascript:void(0)">Action</a></li>
+                      <li><a href="javascript:void(0)">Another action</a></li>
+                      <li><a href="javascript:void(0)">Something else here</a></li>
+                      <li class="divider"></li>
+                      <li><a href="javascript:void(0)">Separated link</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
